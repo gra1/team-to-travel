@@ -29,6 +29,6 @@ module TeamToTravel
     config.assets.paths << Rails.root.join("app", "vendor", "assets", "stylesheets")
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.svg *.eot *.woff *.ttf)
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.svg *.eot *.woff *.ttf *.otf)
   end
 end

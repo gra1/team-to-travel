@@ -10,6 +10,18 @@ body {
     height: 100%;
 }
 
+/*
+@media only screen and (max-width: 500px) {
+  .btn-primary.btn-xl {
+      font-size: 13px;
+  }
+
+  .btn-success.btn-xl {
+    font-size: 13px;
+  }
+}
+*/
+
 body {
     font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
 }
@@ -192,7 +204,6 @@ header .header-content {
 header .header-content .header-content-inner h1 {
     margin-top: 0;
     margin-bottom: 0;
-    text-transform: uppercase;
     font-weight: 700;
 }
 
@@ -485,6 +496,11 @@ body {
   margin-bottom: 75px;
 }
 
+
+h1#project-moto {
+  font-family: 'JennaSue';
+}
+
 .bootstrap-datetimepicker-widget table td.old, .bootstrap-datetimepicker-widget table td.new {
   color: #777777;
 }
@@ -499,4 +515,18 @@ body {
 
 .bootstrap-datetimepicker-widget .timepicker-hour, .bootstrap-datetimepicker-widget .timepicker-minute, .bootstrap-datetimepicker-widget .timepicker-second {
   color: #777777;
+}
+
+#project-logo {
+  margin-right: 100px;
+}
+
+/* @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700); */
+
+@font-face {
+  font-family: 'JennaSue';
+  src:font-url('JennaSue.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: expanded;
 }
