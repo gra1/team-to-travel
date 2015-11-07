@@ -276,5 +276,5 @@ Devise.setup do |config|
 
   #Add your ID and secret here
   #ID first, secret second
-  config.omniauth :facebook, "943929862361659", "c4bd289acd227b2cee4af202324ede06", :secure_image_url => true
+  config.omniauth :facebook, "943929862361659", "c4bd289acd227b2cee4af202324ede06", secure_image_url: true, provider_ignores_state: true
 end
