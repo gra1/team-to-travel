@@ -6,8 +6,8 @@
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /*
@@ -48,13 +48,8 @@ a:focus {
     color: #eb3812;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
 
 p {
@@ -499,6 +494,9 @@ body {
 
 h1#project-moto {
   font-family: 'JennaSue';
+  font-color: #000000;
+  font-size: 48px;
+  font-stretch: -10em;
 }
 
 .bootstrap-datetimepicker-widget table td.old, .bootstrap-datetimepicker-widget table td.new {
@@ -528,5 +526,21 @@ h1#project-moto {
   src:font-url('JennaSue.ttf');
   font-weight: normal;
   font-style: normal;
-  font-stretch: expanded;
+}
+
+#special-trips {
+  width: 100%;
+  height: 100%;
+}
+
+.jumbotron h1, .jumbotron .h1 {
+  color: #193540;
+}
+
+.jumbotron p, .jumbotron .p {
+  color: #95b4bf;
+}
+
+#choose-special-trip.bg-primary2 {
+  background-color: #95b4bf;
 }
