@@ -15,6 +15,9 @@ gem 'jquery-ui-rails'
 gem 'slim-rails'
 # Devise authentication gem
 gem 'devise'
+gem 'therubyracer'
+gem 'omniauth'
+gem 'omniauth-facebook'
 # Puma as alternative server
 gem 'puma'
 #--- CUSTOM GEM's  END ---
