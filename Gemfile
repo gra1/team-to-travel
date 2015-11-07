@@ -20,6 +20,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 # Puma as alternative server
 gem 'puma'
+
+gem "paperclip", "~> 4.3"
 #--- CUSTOM GEM's  END ---
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
