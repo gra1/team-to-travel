@@ -15,8 +15,9 @@
  *= require jquery-ui
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'bootstrap-datetimepicker';
 @import "font-awesome";
 
 @import "creative";

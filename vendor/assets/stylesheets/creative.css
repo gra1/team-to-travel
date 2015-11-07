@@ -51,10 +51,6 @@ p {
     line-height: 1.5;
 }
 
-.bg-primary {
-    background-color: #f05f40;
-}
-
 .bg-dark {
     color: #fff;
     background-color: #222;
@@ -384,13 +380,22 @@ fieldset[disabled] .btn-default.active {
     background-color: #222;
 }
 
-.btn-primary {
-    border-color: #f05f40;
+.btn-primary.btn-xl {
+    /*border-color: #f05f40;*/
     color: #fff;
-    background-color: #f05f40;
+    font-size: 23px;
+    /*background-color: #f05f40;*/
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+}
+
+.btn-success.btn-xl {
+  color: #fff;
+  font-size: 23px;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
 }
 
 .btn-primary:hover,
@@ -439,14 +444,15 @@ fieldset[disabled] .btn-primary.active {
 
 .btn {
     border: 0;
-    border-radius: 300px;
+    border-radius: 5px;
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
 }
 
 .btn-xl {
-    padding: 15px 30px;
+    padding: 50px 25px;
+    margin: 30px;
 }
 
 ::-moz-selection {
@@ -473,4 +479,24 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
+}
+
+#project-moto {
+  margin-bottom: 75px;
+}
+
+.bootstrap-datetimepicker-widget table td.old, .bootstrap-datetimepicker-widget table td.new {
+  color: #777777;
+}
+
+.bootstrap-datetimepicker-widget table td.day {
+  color: #212121;
+}
+
+.bootstrap-datetimepicker-widget table thead tr:first-child th {
+  color: #337ab7;
+}
+
+.bootstrap-datetimepicker-widget .timepicker-hour, .bootstrap-datetimepicker-widget .timepicker-minute, .bootstrap-datetimepicker-widget .timepicker-second {
+  color: #777777;
 }

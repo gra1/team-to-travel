@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails_12factor', group: :production
 # Twitter bootstrap UI css gem
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
 # Font awesome for icons
 gem "font-awesome-rails"
 # JQueryUI library for effects
