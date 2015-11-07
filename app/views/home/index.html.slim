@@ -7,11 +7,11 @@ header
     .header-content-inner
       h1 id="project-moto"
         == image_tag "logo.png", width: "200px", id: "project-logo"
-        | Would you like to habg out with us?
+        | Would you like to habg out with us
       a.btn.btn-primary.btn-xl id="show-special-trip" Find interesting trip
       a.btn.btn-success.btn-xl id="find-team-for-my-trip"  Find team for my trip
 
-section#special-trip.bg-primary
+section#find-special-trip.bg-primary
   .container
     .row
       .col-lg-4.col-lg-offset-2.text-center
@@ -19,6 +19,69 @@ section#special-trip.bg-primary
       .col-lg-2.text-center
         input#datetimepicker4.form-control type="text" placeholder="Date"
       .col-lg-1.text-center
-        button type="button" id="show-special-trip" class="btn btn-danger" Cacel
+        button type="button" id="hide-special-trip" class="btn btn-danger" Cacel
       .col-lg-1.text-center
-        button type="button" class="btn btn-success" Search
+        button type="button" id="show-special-trips" class="btn btn-success" Search
+
+section#choose-special-trip.bg-primary2
+  .container
+    .row
+      .col-xs-6.col-sm-4.col-md-4
+        .thumbnail.text-center
+          .city-img
+            = image_tag "lviv.jpg", class: "img-responsive"
+            .city-name.text-uppercase.text-center Lviv
+            .bg
+              a.btn.btn-primary.btn-success.text-uppercase href="#" role="button"  Join
+          .caption
+            .col-xs-6.noPadding.mobileFullWidth
+              i.fa.fa-calendar
+              span#tripDate 10/28/2015
+            .col-xs-3.noPadding.mobileHalfWidth
+              i.fa.fa-male
+              span#numPeople 10
+            .col-xs-3.noPadding.mobileHalfWidth
+              i.fa.fa-clock-o
+              span#daysCount 99
+            p
+            .clearfix
+
+      .col-xs-6.col-sm-4.col-md-4
+        .thumbnail.text-center
+          .city-img
+            = image_tag "lviv.jpg", class: "img-responsive"
+            .city-name.text-uppercase.text-center Lviv
+            .bg
+              a.btn.btn-primary.btn-success.text-uppercase href="#" role="button"  Join
+          .caption
+            .col-xs-6.noPadding.mobileFullWidth
+              i.fa.fa-calendar
+              span#tripDate 10/28/2015
+            .col-xs-3.noPadding.mobileHalfWidth
+              i.fa.fa-male
+              span#numPeople 10
+            .col-xs-3.noPadding.mobileHalfWidth
+              i.fa.fa-clock-o
+              span#daysCount 99
+            p
+            .clearfix
+
+      .col-xs-6.col-sm-4.col-md-4
+        .thumbnail.text-center
+          .city-img
+            = image_tag "lviv.jpg", class: "img-responsive"
+            .city-name.text-uppercase.text-center Lviv
+            .bg
+              a.btn.btn-primary.btn-success.text-uppercase href="#" role="button"  Join
+          .caption
+            .col-xs-6.noPadding.mobileFullWidth
+              i.fa.fa-calendar
+              span#tripDate 10/28/2015
+            .col-xs-3.noPadding.mobileHalfWidth
+              i.fa.fa-male
+              span#numPeople 10
+            .col-xs-3.noPadding.mobileHalfWidth
+              i.fa.fa-clock-o
+              span#daysCount 99
+            p
+            .clearfix
