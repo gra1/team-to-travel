@@ -15,8 +15,13 @@ gem 'jquery-ui-rails'
 gem 'slim-rails'
 # Devise authentication gem
 gem 'devise'
+gem 'therubyracer'
+gem 'omniauth'
+gem 'omniauth-facebook'
 # Puma as alternative server
 gem 'puma'
+
+gem "paperclip", "~> 4.3"
 #--- CUSTOM GEM's  END ---
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
