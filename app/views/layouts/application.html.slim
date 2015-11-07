@@ -6,4 +6,33 @@ html
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   body
-    = yield
+  .container-fluid
+    /! Main component for a primary marketing message or call to action
+    .row
+      /| <%= render "layouts/sidebar" %
+      .col-xs-12.col-sm-12.col-md-offset-4.col-md-5.main
+        /| <%= render "layouts/nav" %
+        
+        - if flash[:success]
+          .row
+            .col-md-12
+              .alert.alert-success role="alert" 
+                == success
+        
+        - if flash[:notice]
+          .row
+            .col-md-12
+              .alert.alert-warning role="alert" 
+                == notice
+        
+        - if flash[:alert]
+          .row
+            .col-md-12
+              .alert.alert-danger role="alert" 
+                == alert
+
+        .row
+          .col-md-12
+            == yield
+            
+      /.col-xs-12.col-sm-12.col-md-offset-4.col-md-5.main

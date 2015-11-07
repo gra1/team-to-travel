@@ -1,13 +1,29 @@
 source 'https://rubygems.org'
 
+#--- CUSTOM GEM's BEGIN ---
+# Heroku hosting gem
+gem 'rails_12factor', group: :production
+# Twitter bootstrap UI css gem
+gem 'bootstrap-sass', '~> 3.3.5'
+# Font awesome for icons
+gem "font-awesome-rails"
+# JQueryUI library for effects
+gem 'jquery-ui-rails'
+# As Template Engine instead HTML
+gem 'slim-rails'
+# Devise authentication gem
+gem 'devise'
+# Puma as alternative server
+gem 'puma'
+#--- CUSTOM GEM's  END ---
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
-# Use sqlite3 as the database for Active Record
+# Use PostrgeSQL as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-gem 'bootstrap-sass', '~> 3.3.5'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -44,6 +60,10 @@ group :development, :test do
   gem 'spring'
   gem 'pry'
   gem 'pry-rails'
-end
 
-gem 'slim-rails'
+  # In case for testing
+  gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+end
