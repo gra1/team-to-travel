@@ -1,15 +1,9 @@
 class TripRequestController < ApplicationController
   def create
-    @request = TripRequest.new(trip_request_params)
+    @request = TripRequest.new(trip_id: params[:trip_id])
     @request.requestor = current_user
     @request.save
 
     head :ok
-  end
-
-  private
-
-  def trip_request_params
-    params.require(:trip_request).permit(:trip_id)
   end
 end
