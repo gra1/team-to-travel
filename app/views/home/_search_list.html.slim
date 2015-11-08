@@ -32,4 +32,4 @@
                 .col-md-12.col-sm-12.col-xs-12
                   - if current_user
                     - unless trip.trip_requests.map(&:requestor_id).include?(current_user.id) || trip.owner_id.eql?(current_user.id)
-                      = link_to 'Join', {:controller => "trip_request", :action => "create", :trip_id => trip.id }, id: 'show-special-trip', class: 'btn text-uppercase mainBtn lightgreen', remote: true
+                      = link_to 'Join', {:controller => "trip_request", :action => "create", :trip_id => trip.id }, id: 'show-trip', class: 'btn text-uppercase mainBtn lightgreen', remote: true

@@ -6,6 +6,10 @@ ready = ->
   $('#show-special-trip').click ->
     $('#featured').toggle(150)
 
+  $('#show-trip').click (e)->
+    $('#show-trip').fadeOut('slow')
+
+
   $('#hide-special-trip').click ->
     #$('header').toggle(350)
     #$('#choose-special-trip.bg-primary2').toggle(550)
