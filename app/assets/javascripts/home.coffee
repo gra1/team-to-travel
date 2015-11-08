@@ -22,7 +22,11 @@ ready = ->
     #}, 600)
 
   $ ->
-    $('#datetimepicker4').datetimepicker()
+    $('#datetimepickerFrom').datetimepicker()
+    return
+
+  $ ->
+    $('#datetimepickerTo').datetimepicker()
     return
 
   # Google maps

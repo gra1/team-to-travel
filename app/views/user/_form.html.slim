@@ -3,9 +3,9 @@
   = form_for :trip, url: trip_create_path, remote: true, html: { class: 'trip-form' } do |f|
     .col-xs-12
       .form-group.form-inline
-        = f.text_field :destination, class: 'form-control', placeholder: 'Where?'
-        = f.text_field :start_date, class: 'form-control', placeholder: 'From'
-        = f.text_field :end_date, class: 'form-control', placeholder: 'To'
+        = f.text_field :destination, id: 'autocomplete', class: 'form-control', placeholder: 'Where?', onfocus: "geolocate()", autocomplete: 'true'
+        = f.text_field :start_date, class: 'form-control', placeholder: 'From', id: 'datetimepickerFrom'
+        = f.text_field :end_date, class: 'form-control', placeholder: 'To', id: 'datetimepickerTo'
 
     .col-xs-12
       .form-group
