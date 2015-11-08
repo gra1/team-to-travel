@@ -60,6 +60,9 @@ ActiveRecord::Schema.define(version: 20151107202446) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "name"
+    t.string   "link"
+    t.string   "location"
+    t.string   "gender"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
