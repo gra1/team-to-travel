@@ -7,6 +7,7 @@ class HomeController < ApplicationController
   respond_to :html,  :json
 
   def index
+    @user = current_user if current_user
     #flash[:success] = "Our congratulation! You just loaded main page!"
   end
 end

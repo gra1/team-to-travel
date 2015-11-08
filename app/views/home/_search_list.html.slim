@@ -1,0 +1,32 @@
+- @trips.each_slice(3) do |trips|
+  .row.container-post
+    - trips.each do |trip|
+      .col-md-4.col-sm-6
+        .post-container
+          .post-content
+            img alt=("danish personal blog template") src="http://templateninja.net/themes/danish/v1.1/img/image-portfolio-02.jpg" /
+          .post-content
+            p
+              = trip.description
+          .post-atribut
+            .row
+              .col-md-6.col-sm-6.col-xs-6.text-center
+                = image_tag trip.owner.avatar.url(:thumb), class: "img-circle photoImgSmall"
+              .col-md-6.col-sm-6.col-xs-6
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    span
+                    i class="fa fa-calendar"
+                      = trip.start_date.strftime('%d/%m/%y')
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    span
+                    i class="fa fa-users"
+                      = trip.users.count
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    span
+                    i class="fa fa-sun-o"
+                      = (trip.end_date.to_date - trip.start_date.to_date).to_i
+              .col-md-12.col-sm-12.col-xs-12
+                a#show-special-trip.btn.text-uppercase.mainBtn.lightgreen Find
