@@ -10,6 +10,12 @@ class TripController < ApplicationController
     @my_passed_trips =  @own_trips.passed_trips
   end
 
+  def accept
+    @request = TripRequest.find(params[:id])
+    @requst.trip << @requst.requestor
+    @request.destroy
+  end
+
   private
 
   def trip_params
