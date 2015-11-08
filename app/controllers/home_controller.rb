@@ -14,7 +14,7 @@ class HomeController < ApplicationController
 
   def search
     @trips = Trip.all
-    @trips = @trips.where('start_date <= ? AND end_date >= ?', params[:trip][:date], params[:trip][:date]) unless params[:trip][:date].empty?
+    @trips = @trips.where('start_date <= ? AND end_date >= ?', params[:trip][:date].to_date, params[:trip][:date].to_date) unless params[:trip][:date].empty?
     @trips = @trips.where(destination: params[:trip][:destination]) unless params[:trip][:destination].empty?
   end
 end
