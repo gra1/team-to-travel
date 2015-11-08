@@ -1,0 +1,17 @@
+.col-xs-12
+  h3.text-underline Plan your next trip:
+  = form_for :trip, url: trip_create_path, remote: true do |f|
+    .col-xs-12
+      .form-group.form-inline
+        = f.text_field :destination, class: 'form-control', placeholder: 'Where?'
+        = f.text_field :start_date, class: 'form-control', placeholder: 'From'
+        = f.text_field :end_date, class: 'form-control', placeholder: 'To'
+
+    .col-xs-12
+      .form-group
+        = f.text_area :description, class: 'form-control', placeholder: 'Description', rows: '3'
+    .col-xs-12
+      .form-group
+        button#cancel.btn.btn-danger type="button"  Cancel
+        = ' Or '
+        = f.submit 'Create', class: 'btn btn-info'

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'user', to: 'user#index'
+  post 'trip/create'
+
+  get 'user/:id' => 'user#show'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   root 'home#index'
