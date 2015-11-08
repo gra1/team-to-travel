@@ -10,7 +10,8 @@
           span.icon-bar
         a.navbar-brand href=""
           i class="fa fa-user"
-            span Dani
+            span
+              = current_user.email
       /! Collect the nav links, forms, and other content for toggling
       #navbar-top.collapse.navbar-collapse
         ul.nav.nazzvbar-nav.navbar-right

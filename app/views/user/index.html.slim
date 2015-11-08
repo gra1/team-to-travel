@@ -1,5 +1,41 @@
 section#user-profile
   .container
+    .jumbotron#special-trips
+      .top-buffer.mainContent
+        .container
+          .row
+            .col-sm-3.text-center
+              = image_tag "icon-user-default.png", class: "img-circle img-responsive photoImg"
+              a.btn.btn-primary.btn-lg.text-uppercase.top-buffer.show-trip-form href="" role="button"  Add new trip
+              .top-buffer.visible-xs
+            .col-sm-9
+              .jumbotron
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          .row
+            .col-xs-12
+              h3.text-underline Some information:
+            .col-sm-6.col-xs-12
+              div
+                span#age> How old
+                | ,
+                span#State State
+              .top-small-buffer
+                | Works as:
+                span#worksAs
+              .top-small-buffer
+                | Languages:
+                span#languages
+            .col-sm-6.col-xs-12
+              .top-small-buffer
+                | From:
+                span#from
+          .row.hidden.add-trip-form
+            = render 'form'
+          .row
+            = render 'trip_list'
+
+section#user-profile
+  .container
     .row
       .col-md-12
         .page-title
