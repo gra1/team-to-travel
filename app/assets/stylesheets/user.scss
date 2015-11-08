@@ -11,6 +11,38 @@
   display: inline-block;
 }
 
+
+p.talkbubble {
+  position: relative;
+  min-height: 100px;
+
+  padding: 10px;
+  border-radius: 5px;
+  border: solid lightblue;
+  background: lightblue;
+}
+
+p.talkbubble:before {
+  content:"";
+  position: absolute;
+  right: 100%;
+  top: 26px;
+  width: 0;
+  height: 0;
+
+  border-top: 13px solid transparent;
+  border-right: 26px solid lightblue;
+  border-bottom: 13px solid transparent;
+}
+
+.jumbotron#special-trips {
+  background-color: #d9dae9;
+}
+
+.jumbotron p, .jumbotron .p {
+  color: #333333;
+}
+
 /* .top-buffer {
     margin-top: 20px;
 }
