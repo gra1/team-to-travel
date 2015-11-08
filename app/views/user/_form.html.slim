@@ -1,6 +1,6 @@
 .col-xs-12
   h3.text-underline Plan your next trip:
-  = form_for :trip, url: trip_create_path, remote: true do |f|
+  = form_for :trip, url: trip_create_path, remote: true, html: { class: 'trip-form' } do |f|
     .col-xs-12
       .form-group.form-inline
         = f.text_field :destination, class: 'form-control', placeholder: 'Where?'

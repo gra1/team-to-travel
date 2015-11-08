@@ -4,7 +4,10 @@ class TripController < ApplicationController
     @trip.owner = current_user
     @trip.save
 
-    head :ok
+    @own_trips = Trip.where(owner: current_user)
+
+    @my_future_trips = @own_trips.future_trips
+    @my_passed_trips =  @own_trips.passed_trips
   end
 
   private

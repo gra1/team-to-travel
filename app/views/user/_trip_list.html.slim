@@ -1,0 +1,18 @@
+.container.trip-list
+  .bs-example.bs-example-tabs data-example-id="togglable-tabs"
+    ul#myTabs.nav.nav-tabs role="tablist"
+      li.active role="presentation"
+        a#home-tab aria-controls="home" aria-expanded="true" data-toggle="tab" href="#home" role="tab"  Feauture trips
+      li role="presentation"
+        a#profile-tab aria-controls="profile" data-toggle="tab" href="#profile" role="tab"  Passed trips
+    #myTabContent.tab-content
+      #home.tab-pane.fade.in.active aria-labelledby="home-tab" role="tabpanel"
+        - @my_future_trips.each do |trip|
+          p
+            = trip.description
+
+
+      #profile.tab-pane.fade aria-labelledby="profile-tab" role="tabpanel"
+        - @my_passed_trips.each do |trip|
+            p
+              = trip.description
