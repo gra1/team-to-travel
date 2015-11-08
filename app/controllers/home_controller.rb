@@ -11,4 +11,10 @@ class HomeController < ApplicationController
     #flash[:success] = "Our congratulation! You just loaded main page!"
     @trips = Trip.all
   end
+
+  def search
+    @trips = Trip.all
+    @trips = @trips.where('start_date <= ? AND end_date >= ?', params[:trip][:date], params[:trip][:date]) unless params[:trip][:date].empty?
+    @trips = @trips.where(destination: params[:trip][:destination]) unless params[:trip][:destination].empty?
+  end
 end

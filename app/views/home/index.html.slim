@@ -6,16 +6,16 @@ section#header
         = image_tag "logo.png", id: "project-logo"
       .col-md-8
         blockquote.hidden-sm
-          p.hidden-sm Mendapatkan hati wanita cantik itu tidak mudah, apalagi jika kamu tidak terlalu lucu ~
-          small.hidden-sm Tarjono
+          p.hidden-sm The man who goes alone can start today; but he who travels with another must wait till that other is ready.
+          small.hidden-sm Henry David Thoreau
         .row
           .col-md-6
-            a#show-special-trip.btn.text-uppercase.mainBtn.lightgreen Find
+            a#show-special-trip.btn.text-uppercase.mainBtn.lightgreen Find a Travels
           .col-md-6
             - if @user.nil?
               = link_to 'Login','/users/auth/facebook', class: 'btn text-uppercase mainBtn'
             - else
-              = link_to 'Add',"/user/#{@user.id}", class: 'btn text-uppercase mainBtn'
+              = link_to 'Share Adventures',"/user/#{@user.id}", class: 'btn text-uppercase mainBtn'
 
 /! end:header
 /! begin:featured
@@ -23,16 +23,18 @@ section#header
   section#find-special-trip
     .container
       .row
-        .col-xs-5.col-lg-6.text-center
-          input#autocomplete class="form-control" onfocus="geolocate()" placeholder="Where would you like to go" type="text"
-        .col-xs-3.col-lg-2.text-center
-          input#datetimepickerFrom.form-control type="text" placeholder="From"
-        .col-xs-3.col-lg-2.text-center
-            input#datetimepickerTo.form-control type="text" placeholder="To"
-        .col-xs-6.col-lg-1.text-center
-          button type="button" id="hide-special-trip" class="btn btn-danger" Cacel
-        .col-xs-6.col-lg-1.text-center
-          button type="button" id="show-special-trips" class="btn btn-success" Search
+        = form_tag home_search_path, method: :post, remote: true do |f|
+          .col-xs-5.col-lg-6.text-center
+            = text_field :trip, :destination, class: 'form-control', id: 'autocomplete', placeholder: 'Where would you like to go', onfocus: 'geolocate()'
+          .col-xs-3.col-lg-2.text-center
+            = text_field :trip, :date, class: 'form-control', id: 'datetimepickerFrom', placeholder: 'Date'
+
+          .col-xs-3.col-lg-2.text-center
+            button type="button" id="hide-special-trip" class="btn btn-danger" Cancel
+
+          .col-xs-6.col-lg-1.text-center
+            = submit_tag 'Search' , id: 'show-special-trips', class: 'btn btn-success'
+
 /! end:featured
 /! begin:content
 section#content
@@ -41,8 +43,7 @@ section#content
       .col-md-12
         .page-title
           h2 Cloaser trips
-    .search-trip-list
-      = render 'search_list'
+    = render 'search_list'
 
     /! end:article
 /! end:content
