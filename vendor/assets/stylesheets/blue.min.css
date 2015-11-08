@@ -5,7 +5,7 @@ SILENT IS GOLDEN
 */
 
 #header {
-	background-image: url("header.jpg");
+	background-image: image-url("header.jpg");
 }
 
 #project-logo {
