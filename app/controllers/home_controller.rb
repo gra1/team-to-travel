@@ -9,5 +9,6 @@ class HomeController < ApplicationController
   def index
     @user = current_user if current_user
     #flash[:success] = "Our congratulation! You just loaded main page!"
+    @trips = Trip.all
   end
 end

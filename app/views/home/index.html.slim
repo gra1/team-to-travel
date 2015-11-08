@@ -10,9 +10,9 @@ section#header
           small.hidden-sm Tarjono
         .row
           .col-md-6
-            a#show-special-trip.btn.text-uppercase.mainBtn Find
+            a#show-special-trip.btn.text-uppercase.mainBtn.lightgreen Find
           .col-md-6
-            a#find-team-for-my-trip.btn.text-uppercase.mainBtn.lightgreen Add
+            a#find-team-for-my-trip.btn.text-uppercase.mainBtn add
 /! end:header
 /! begin:featured
 #featured
@@ -37,98 +37,9 @@ section#content
       .col-md-12
         .page-title
           h2 Cloaser trips
-    .row.container-post
-      /! break
-      .col-md-4.col-sm-6
-        .post-container
-          .post-content
-            blockquote
-              p
-                | Dikehidupan manusia itu memang banyak usaha yang tidak membuahkan hasil. Usaha mendapatkan..
-              small Bardiman
-          .post-atribut
-            .row
-              .col-md-6.col-sm-6.col-xs-6.text-center
-                = image_tag "icon-user-default.png", class: "img-circle photoImgSmall"
-              .col-md-6.col-sm-6.col-xs-6
-                .row
-                  .col-md-12.col-sm-12.col-xs-12
-                    a href="#"
-                      span
-                      i class="fa fa-calendar"
-                        | 10/28/2015
-                .row
-                  .col-md-12.col-sm-12.col-xs-12
-                    a href="#"
-                      span
-                      i class="fa fa-users"
-                        | 7
-                .row
-                  .col-md-12.col-sm-12.col-xs-12
-                    a href="#"
-                      span
-                      i class="fa fa-sun-o"
-                        | 5
-      /! break
-      .col-md-4.col-sm-6
-        .post-container
-          .post-content
-            img alt=("danish personal blog template") src="http://templateninja.net/themes/danish/v1.1/img/image-portfolio-02.jpg" /
-          .post-content
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-          .post-atribut
-            .row
-              .col-md-6.col-sm-6.col-xs-6.text-center
-                = image_tag "icon-user-default.png", class: "img-circle photoImgSmall"
-              .col-md-6.col-sm-6.col-xs-6
-                .row
-                  .col-md-12.col-sm-12.col-xs-12
-                    a href="#"
-                      span
-                      i class="fa fa-calendar"
-                        | 10/28/2015
-                .row
-                  .col-md-12.col-sm-12.col-xs-12
-                    a href="#"
-                      span
-                      i class="fa fa-users"
-                        | 7
-                .row
-                  .col-md-12.col-sm-12.col-xs-12
-                    a href="#"
-                      span
-                      i class="fa fa-sun-o"
-                        | 5
-      /! break
-      .col-md-4.col-sm-6
-        .post-container
-          .post-content
-            img alt=("danish personal blog template") src="http://templateninja.net/themes/danish/v1.1/img/image-portfolio-04.jpg" /
+    .search-trip-list
+      = render 'search_list'
 
-          .post-atribut
-            .row
-              .col-md-6.col-sm-6.col-xs-6.text-center
-                = image_tag "icon-user-default.png", class: "img-circle photoImgSmall"
-              .col-md-6.col-sm-6.col-xs-6
-                .row
-                  .col-md-12.col-sm-12.col-xs-12
-                    a href="#"
-                      span
-                      i class="fa fa-calendar"
-                        | 10/28/2015
-                .row
-                  .col-md-12.col-sm-12.col-xs-12
-                    a href="#"
-                      span
-                      i class="fa fa-users"
-                        | 7
-                .row
-                  .col-md-12.col-sm-12.col-xs-12
-                    a href="#"
-                      span
-                      i class="fa fa-sun-o"
-                        | 5
-      /! break
     /! end:article
 /! end:content
 /! begin:portfolio
