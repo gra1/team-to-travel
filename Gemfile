@@ -11,6 +11,10 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
 gem "font-awesome-rails"
 # JQueryUI library for effects
 gem 'jquery-ui-rails'
+# parallaz for JQuery
+gem 'parallax-rails'
+# JQuery carousel
+gem 'owlcarousel-rails'
 # As Template Engine instead HTML
 gem 'slim-rails'
 # Devise authentication gem

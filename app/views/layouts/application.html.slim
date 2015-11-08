@@ -2,7 +2,9 @@ doctype html
 html
   head
     title Team to travel
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Raleway:400,800', rel: 'stylesheet', type: 'text/css'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Noto+Serif:700,400italic', rel: 'stylesheet', type: 'text/css'
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
     meta name="viewport" content="width=device-width, initial-scale=1"
@@ -10,5 +12,6 @@ html
   
   == render "layouts/header"
   
-  == yield    
-      /.col-xs-12.col-sm-12.col-md-offset-4.col-md-5.main
+  == yield
+      
+  script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI6Qr5opxyrzLsCOWA8PTxW7IOPgbfVEQ&signed_in=true&libraries=places&callback=initAutocomplete" async defer

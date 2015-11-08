@@ -1,0 +1,55 @@
+/*
+Ciieeee~ liat-liat ciiieeee~
+		~ O ~
+SILENT IS GOLDEN
+*/
+
+#header {
+	background-image: url("header.jpg");
+}
+
+#project-logo {
+    max-width: 250px;
+    margin-top: 20px;
+}
+
+.mainBtn {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  padding: 10px 5px;
+  border-radius: 0.3rem;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+  background: #FF5722;
+  box-shadow: 0 0.25rem #942300;
+  height: 50px;
+  font-size:  23px;
+  margin-top: 30px;
+}
+
+.mainBtn:active,.mainBtn:hover ,.mainBtn:focus {
+  -webkit-transform: translateY(0.125rem);
+  -ms-transform: translateY(0.125rem);
+  transform: translateY(0.125rem);
+  box-shadow: 0 0.125rem #942300;
+  color: #fff;
+}
+
+
+.mainBtn.lightgreen {
+  background: #8BC34A;
+  box-shadow: 0 0.25rem #33691E;
+}
+
+.mainBtn.lightgreen:active {
+  box-shadow: 0 0.125rem #33691E;
+}

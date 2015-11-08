@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
-  username: gra1
-  password:
+  username: yuzhva
+  password: 233223
   host: localhost
   encoding: utf8
   pool: 12

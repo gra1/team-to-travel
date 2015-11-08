@@ -1,87 +1,150 @@
-/ = link_to "Sign out", destroy_user_session_path, method: :delete
-/ |
-/ = image_tag current_user.avatar.url(:thumb), size: "100x100" if current_user
-header
-  .header-content
-    == render "layouts/alerts"
-    .header-content-inner
-      h1 id="project-moto"
-        == image_tag "logo.png", width: "200px", id: "project-logo"
-        | Would you like to habg out with us
-      a.btn.btn-primary.btn-xl id="show-special-trip" Find interesting trip
-      a.btn.btn-success.btn-xl id="find-team-for-my-trip"  Find team for my trip
-
-section#find-special-trip.bg-primary
+nav.navbar.navbar-default.navbar-transparent.navbar-fixed-top role="navigation" 
+  .container
+    /! Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggle data-target="#navbar-top" data-toggle="collapse" type="button" 
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand href="" 
+        i class="fa fa-user"
+          span Dani
+    /! Collect the nav links, forms, and other content for toggling
+    #navbar-top.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          a href=""  Logout
+    /! /.navbar-collapse
+  /! /.container-fluid
+section#header
   .container
     .row
-      .col-lg-4.col-lg-offset-2.text-center
-        input type="text" class="form-control" placeholder="Where would you like to go"
-      .col-lg-2.text-center
-        input#datetimepicker4.form-control type="text" placeholder="Date"
-      .col-lg-1.text-center
-        button type="button" id="hide-special-trip" class="btn btn-danger" Cacel
-      .col-lg-1.text-center
-        button type="button" id="show-special-trips" class="btn btn-success" Search
-
-section#choose-special-trip.bg-primary2
+      .col-md-4
+        = image_tag "logo.png", id: "project-logo"
+      .col-md-8
+        blockquote
+          p Mendapatkan hati wanita cantik itu tidak mudah, apalagi jika kamu tidak terlalu lucu ~
+          small Tarjono
+          .row
+            .col-md-6
+              a#show-special-trip.btn.text-uppercase.mainBtn.lightgreen Find
+            .col-md-6
+              a#find-team-for-my-trip.btn.text-uppercase.mainBtn add
+/! end:header
+/! begin:featured
+#featured
+  section#find-special-trip
+    .container
+      .row
+        .col-lg-6.col-lg-offset-1.text-center
+          input#autocomplete class="form-control" onfocus="geolocate()" placeholder="Where would you like to go" type="text" 
+        .col-lg-3.text-center
+          input#datetimepicker4.form-control type="text" placeholder="Date"
+        .col-lg-1.text-center
+          button type="button" id="hide-special-trip" class="btn btn-danger" Cacel
+        .col-lg-1.text-center
+          button type="button" id="show-special-trips" class="btn btn-success" Search
+/! end:featured
+/! begin:content
+section#content
   .container
     .row
-      .col-xs-6.col-sm-4.col-md-4
-        .thumbnail.text-center
-          .city-img
-            = image_tag "lviv.jpg", class: "img-responsive"
-            .city-name.text-uppercase.text-center Lviv
-            .bg
-              a.btn.btn-primary.btn-success.text-uppercase href="#" role="button"  Join
-          .caption
-            .col-xs-6.noPadding.mobileFullWidth
-              i.fa.fa-calendar
-              span#tripDate 10/28/2015
-            .col-xs-3.noPadding.mobileHalfWidth
-              i.fa.fa-male
-              span#numPeople 10
-            .col-xs-3.noPadding.mobileHalfWidth
-              i.fa.fa-clock-o
-              span#daysCount 99
-            p
-            .clearfix
+      .col-md-12
+        .page-title
+          h2 Cloaser trips
+    .row.container-post
+      /! break
+      .col-md-4.col-sm-6
+        .post-container
+          .post-content
+            blockquote
+              p
+                | Dikehidupan manusia itu memang banyak usaha yang tidak membuahkan hasil. Usaha mendapatkan..
+              small Bardiman
+          .post-atribut
+            .row
+              .col-md-6.col-sm-6.col-xs-6.text-center
+                = image_tag "icon-user-default.png", class: "img-circle photoImgSmall"
+              .col-md-6.col-sm-6.col-xs-6
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    a href="#" 
+                      span
+                      i class="fa fa-calendar"
+                        | 10/28/2015
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    a href="#" 
+                      span
+                      i class="fa fa-users"
+                        | 7
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    a href="#" 
+                      span
+                      i class="fa fa-sun-o"
+                        | 5
+      /! break
+      .col-md-4.col-sm-6
+        .post-container
+          .post-content 
+            img alt=("danish personal blog template") src="http://templateninja.net/themes/danish/v1.1/img/image-portfolio-02.jpg" /
+          .post-content
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+          .post-atribut
+            .row
+              .col-md-6.col-sm-6.col-xs-6.text-center
+                = image_tag "icon-user-default.png", class: "img-circle photoImgSmall"
+              .col-md-6.col-sm-6.col-xs-6
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    a href="#" 
+                      span
+                      i class="fa fa-calendar"
+                        | 10/28/2015
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    a href="#" 
+                      span
+                      i class="fa fa-users"
+                        | 7
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    a href="#" 
+                      span
+                      i class="fa fa-sun-o"
+                        | 5
+      /! break
+      .col-md-4.col-sm-6
+        .post-container
+          .post-content
+            img alt=("danish personal blog template") src="http://templateninja.net/themes/danish/v1.1/img/image-portfolio-04.jpg" /
 
-      .col-xs-6.col-sm-4.col-md-4
-        .thumbnail.text-center
-          .city-img
-            = image_tag "lviv.jpg", class: "img-responsive"
-            .city-name.text-uppercase.text-center Lviv
-            .bg
-              a.btn.btn-primary.btn-success.text-uppercase href="#" role="button"  Join
-          .caption
-            .col-xs-6.noPadding.mobileFullWidth
-              i.fa.fa-calendar
-              span#tripDate 10/28/2015
-            .col-xs-3.noPadding.mobileHalfWidth
-              i.fa.fa-male
-              span#numPeople 10
-            .col-xs-3.noPadding.mobileHalfWidth
-              i.fa.fa-clock-o
-              span#daysCount 99
-            p
-            .clearfix
-
-      .col-xs-6.col-sm-4.col-md-4
-        .thumbnail.text-center
-          .city-img
-            = image_tag "lviv.jpg", class: "img-responsive"
-            .city-name.text-uppercase.text-center Lviv
-            .bg
-              a.btn.btn-primary.btn-success.text-uppercase href="#" role="button"  Join
-          .caption
-            .col-xs-6.noPadding.mobileFullWidth
-              i.fa.fa-calendar
-              span#tripDate 10/28/2015
-            .col-xs-3.noPadding.mobileHalfWidth
-              i.fa.fa-male
-              span#numPeople 10
-            .col-xs-3.noPadding.mobileHalfWidth
-              i.fa.fa-clock-o
-              span#daysCount 99
-            p
-            .clearfix
+          .post-atribut
+            .row
+              .col-md-6.col-sm-6.col-xs-6.text-center
+                = image_tag "icon-user-default.png", class: "img-circle photoImgSmall"
+              .col-md-6.col-sm-6.col-xs-6
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    a href="#" 
+                      span
+                      i class="fa fa-calendar"
+                        | 10/28/2015
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    a href="#" 
+                      span
+                      i class="fa fa-users"
+                        | 7
+                .row
+                  .col-md-12.col-sm-12.col-xs-12
+                    a href="#" 
+                      span
+                      i class="fa fa-sun-o"
+                        | 5
+      /! break
+    /! end:article
+/! end:content
+/! begin:portfolio

@@ -1,17 +1,23 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.photoImg {
+  max-width: 150px;
+  display: inline-block;
+}
+.photoImgSmall {
+  height: 75px;
+  max-width: 75px;
+  display: inline-block;
+}
 
-.top-buffer {
+/* .top-buffer {
     margin-top: 20px;
 }
 .top-small-buffer {
     margin-top: 10px;
 }
-.photoImg {
-    max-width: 150px;
-    display: inline-block;
-}
+
 .jumbotron {
     padding-left: 60px;
     padding-right: 60px;
@@ -85,9 +91,6 @@
     transition: opacity 0.5s 0s ease-in-out;
 }
 
-
-
-
 .noPadding {
     padding: 0;
 }
@@ -99,4 +102,72 @@
     .mobileFullWidth {
         width: 100%;
     }
+}
+*/
+body {
+  background: #eaeaea;
+}
+.user-details {
+  position: relative;
+  padding: 0;
+}
+.user-details .user-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+.user-image img {
+  clear: both;
+  margin: auto;
+  position: relative;
+}
+.user-details .user-info-block {
+  width: 100%;
+  position: absolute;
+  top: 55px;
+  background: rgb(255, 255, 255);
+  z-index: 0;
+  padding-top: 35px;
+}
+.user-info-block .user-heading {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0 0;
+}
+.user-info-block .navigation {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #428bca;
+  border-top: 1px solid #428bca;
+}
+.navigation li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.navigation li a {
+  padding: 20px 30px;
+  float: left;
+}
+.navigation li.active a {
+  background: #428bca;
+  color: #fff;
+}
+.user-info-block .user-body {
+  float: left;
+  padding: 5%;
+  width: 90%;
+}
+.user-body .tab-content > div {
+  float: left;
+  width: 100%;
+}
+.user-body .tab-content h4 {
+  width: 100%;
+  margin: 10px 0;
+  color: #333;
 }

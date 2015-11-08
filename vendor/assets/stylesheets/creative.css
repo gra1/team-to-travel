@@ -68,7 +68,7 @@ p {
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 aside {
@@ -181,18 +181,20 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: image-url("header.jpg");
+    background-image: url("header.jpg");
     background-position: center;
+    background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    min-height: 270px;
+    padding: 20px;
 }
 
 header .header-content {
     position: relative;
     width: 100%;
-    padding: 100px 15px;
     text-align: center;
 }
 
@@ -212,33 +214,66 @@ header .header-content .header-content-inner p {
     font-weight: 300;
     color: rgba(255,255,255,.7);
 }
+.mainBtn {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  padding: 10px 5px;
+  border-radius: 0.3rem;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+  background: #FF5722;
+  box-shadow: 0 0.25rem #942300;
+  height: 50px;
+  font-size:  23px;
+  margin-top: 80px;
+}
 
-@media(min-width:768px) {
-    header {
-        min-height: 100%;
-    }
+.mainBtn:active,.mainBtn:hover ,.mainBtn:focus {
+  -webkit-transform: translateY(0.125rem);
+  -ms-transform: translateY(0.125rem);
+  transform: translateY(0.125rem);
+  box-shadow: 0 0.125rem #942300;
+  color: #fff;
+}
 
-    header .header-content {
-        position: absolute;
-        top: 50%;
-        padding: 0 50px;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
 
-    header .header-content .header-content-inner {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 1000px;
-    }
+.mainBtn.lightgreen {
+  background: #8BC34A;
+  box-shadow: 0 0.25rem #33691E;
+}
 
-    header .header-content .header-content-inner p {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 80%;
-        font-size: 18px;
-    }
+.mainBtn.lightgreen:active {
+  box-shadow: 0 0.125rem #33691E;
+}
+
+
+
+
+#project-logo {
+    max-width: 250px;
+    margin-top: 20px;
+}
+
+
+
+
+@media (max-width: 768px){
+  #project-logo {
+    margin-top: 20px;
+  }
+  .mainBtn {
+    margin-top: 20px;
+  }
+
 }
 
 .section-heading {
@@ -538,9 +573,32 @@ h1#project-moto {
 }
 
 .jumbotron p, .jumbotron .p {
-  color: #95b4bf;
+  color: #eee;
 }
 
 #choose-special-trip.bg-primary2 {
-  background-color: #95b4bf;
+  background-color: #eee;
+}
+
+p.talkbubble {
+  position: relative;
+  min-height: 204px;
+
+  padding: 10px;
+  border-radius: 5px;
+  border: solid lightblue;
+  background: lightblue;
+}
+
+p.talkbubble:before {
+  content:"";
+  position: absolute;
+  right: 100%;
+  top: 26px;
+  width: 0;
+  height: 0;
+
+  border-top: 13px solid transparent;
+  border-right: 26px solid lightblue;
+  border-bottom: 13px solid transparent;
 }
