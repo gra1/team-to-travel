@@ -29,8 +29,8 @@ SILENT IS GOLDEN
   user-select: none;
   cursor: pointer;
   text-decoration: none;
-  background: #FF5722;
-  box-shadow: 0 0.25rem #942300;
+  background: #aaaeee;
+  box-shadow: 0 0.25rem #555777;
   height: 50px;
   font-size:  23px;
   margin-top: 30px;
@@ -40,7 +40,7 @@ SILENT IS GOLDEN
   -webkit-transform: translateY(0.125rem);
   -ms-transform: translateY(0.125rem);
   transform: translateY(0.125rem);
-  box-shadow: 0 0.125rem #942300;
+  box-shadow: 0 0.125rem #555777;
   color: #fff;
 }
 
@@ -52,4 +52,8 @@ SILENT IS GOLDEN
 
 .mainBtn.lightgreen:active {
   box-shadow: 0 0.125rem #33691E;
+}
+.navbar-default .nav.nazzvbar-nav a {
+	padding: 13px;
+	font-size: 15px;
 }

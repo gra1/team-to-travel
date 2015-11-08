@@ -231,7 +231,7 @@ header .header-content .header-content-inner p {
   cursor: pointer;
   text-decoration: none;
   background: #FF5722;
-  box-shadow: 0 0.25rem #942300;
+  box-shadow: 0 0.25rem #555777;
   height: 50px;
   font-size:  23px;
   margin-top: 80px;
@@ -241,7 +241,7 @@ header .header-content .header-content-inner p {
   -webkit-transform: translateY(0.125rem);
   -ms-transform: translateY(0.125rem);
   transform: translateY(0.125rem);
-  box-shadow: 0 0.125rem #942300;
+  box-shadow: 0 0.125rem #555777;
   color: #fff;
 }
 
@@ -269,6 +269,7 @@ header .header-content .header-content-inner p {
 @media (max-width: 768px){
   #project-logo {
     margin-top: 20px;
+    margin-right: 0 !important;
   }
   .mainBtn {
     margin-top: 20px;
