@@ -12,7 +12,11 @@ section#header
           .col-md-6
             a#show-special-trip.btn.text-uppercase.mainBtn.lightgreen Find
           .col-md-6
-            a#find-team-for-my-trip.btn.text-uppercase.mainBtn add
+            - if @user.nil?
+              = link_to 'Login','/users/auth/facebook', class: 'btn text-uppercase mainBtn'
+            - else
+              = link_to 'Add',"/user/#{@user.id}", class: 'btn text-uppercase mainBtn'
+
 /! end:header
 /! begin:featured
 #featured
