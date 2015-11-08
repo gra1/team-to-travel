@@ -16,10 +16,13 @@
 //= require bootstrap-sprockets
 //= require moment
 //= require bootstrap-datetimepicker
+<<<<<<< HEAD
 //= require owl.carousel
 //= require turbolinks
 //= require demo
 //= require gmap3.min
 //= require imagesloaded.pkgd.min
 //= require masonry.pkgd.min
+=======
+>>>>>>> d652d39e47128f964ba9c18e3d08ba92082707e0
 //= require_tree .

@@ -1,3 +1,23 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+class @UserProfile
+  constructor: (el) ->
+    @el = $(el)
+    @_bindEvents()
+
+  _bindEvents: ->
+    @el.on 'click', '.show-trip-form', @_showTripForm
+
+    @el.on 'click', '#cancel', @_hideTripForm
+
+    @el.on 'ajax:success', '.trip-form', @_hideTripForm
+
+  _showTripForm: (e)=>
+    @el.find('.add-trip-form').removeClass('hidden')
+    return false
+
+  _hideTripForm: (e)=>
+    @el.find('.add-trip-form').addClass('hidden')
+    @el.find('.trip-form').trigger('reset')
+    return false
+
+$ ->
+  new UserProfile('#user-profile')

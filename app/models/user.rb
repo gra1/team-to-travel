@@ -6,16 +6,16 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
 
+  has_and_belongs_to_many :trips
+
   def self.from_omniauth(auth)
+    puts auth
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.email = auth.info.email
       user.avatar = auth.info.image
       user.name = auth.info.name
-      user.link = auth.extra.raw_info.link
-      user.location = auth.info.location
-      user.gender = auth.extra.raw_info.gender
       user.password = Devise.friendly_token[0,20]
     end
   end
